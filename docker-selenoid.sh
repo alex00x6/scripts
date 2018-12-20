@@ -1,2 +1,2 @@
-docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ${HOME}:/root -e OVERRIDE_HOME=${HOME} aerokube/cm:latest-release selenoid start --vnc --tmpfs 128 --last-versions 2 --browsers chrome,firefox --args "-limit 10 -timeout 1200s -conf /etc/selenoid/browsers.json" --force
+docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ${HOME}:/root -e OVERRIDE_HOME=${HOME} aerokube/cm:latest-release selenoid start --vnc --tmpfs 1024 --last-versions 5 --browsers chrome --args "-cpu 1.0 -mem 4g -limit 6 -timeout 1200s -conf /etc/selenoid/browsers.json" --force
 docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v ${HOME}:/root -e OVERRIDE_HOME=${HOME} aerokube/cm:latest-release selenoid-ui start
